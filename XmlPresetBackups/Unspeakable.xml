@@ -9,8 +9,10 @@
         <Processor Type="ScriptProcessor" ID="Interface" Bypassed="0">
           <ChildProcessors/>
           <Content>
-            <Control type="ScriptSlider" id="knbInputGain" value="0.0"/>
-            <Control type="ScriptSlider" id="knbOutputGain" value="-16.0"/>
+            <Control type="ScriptSlider" id="knbInputGain" value="20.47999954223633"/>
+            <Control type="ScriptSlider" id="knbOutputGain" value="-29.79000091552734"/>
+            <Control type="ScriptSlider" id="knbMode" value="2.0"/>
+            <Control type="ScriptSlider" id="knbClarity" value="88.26000213623047"/>
           </Content>
           <UIData Source="UnspeakableUIData"/>
         </Processor>

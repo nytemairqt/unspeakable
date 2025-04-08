@@ -1,6 +1,6 @@
-Content.makeFrontInterface(350, 100);
+Content.makeFrontInterface(700, 100);
 
-const knbControls = [Content.getComponent("knbInputGain"), Content.getComponent("knbOutputGain")]
+const knbControls = [Content.getComponent("knbInputGain"), Content.getComponent("knbOutputGain"), Content.getComponent("knbMode"), Content.getComponent("knbClarity")];
 const scriptFX = Synth.getEffect("scriptFX");
 
 
@@ -13,6 +13,12 @@ inline function onknbControl(component, value)
 			break;
 		case knbControls[1]: // Output Gain
 			scriptFX.setAttribute(scriptFX.outputGain, value);
+			break;
+		case knbControls[2]: // Mode
+			scriptFX.setAttribute(scriptFX.mode, value);
+			break;
+		case knbControls[3]: // Clarity
+			scriptFX.setAttribute(scriptFX.clarity, 0-value);
 			break;
 	}
 }
