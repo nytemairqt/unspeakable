@@ -32,7 +32,7 @@
               </DisplayBuffers>
             </ComplexData>
             <Parameters>
-              <Parameter MinValue="0.0" MaxValue="3.0" StepSize="1" ID="mode" DefaultValue="0.0"
+              <Parameter MinValue="0.0" MaxValue="19.0" StepSize="1" ID="mode" DefaultValue="0.0"
                          Automated="1"/>
             </Parameters>
           </Node>
@@ -63,7 +63,8 @@
           <Connection NodeId="gain3" ParameterId="Gain"/>
         </Connections>
       </Parameter>
-      <Parameter ID="mode" MinValue="0.0" MaxValue="3.0" StepSize="1" Value="1.0">
+      <Parameter ID="mode" MinValue="0.0" MaxValue="19.0" StepSize="1" Value="0.0"
+                 DefaultValue="1.0">
         <Connections>
           <Connection NodeId="snex_shaper" ParameterId="mode"/>
         </Connections>

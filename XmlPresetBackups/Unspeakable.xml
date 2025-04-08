@@ -42,7 +42,7 @@
         </Processor>
       </ChildProcessors>
     </Processor>
-    <Processor Type="AudioLooper" ID="Audio Loop Player1" Bypassed="0" Gain="1.0"
+    <Processor Type="AudioLooper" ID="Audio Loop Player1" Bypassed="1" Gain="1.0"
                Balance="0.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                SyncMode="1.0" PitchTracking="0.0" LoopEnabled="0.0" RootNote="64.0"
                SampleStartMod="0.0" Reversed="0.0" FileName="C:\Users\nytem\Documents\Virtual Instruments &amp; Samples\Other\Celldweller - Sonix Vol. 01\Drums\Live Loops\DRUMS-Live Beats 01 (92).wav"
@@ -73,7 +73,7 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="AudioLooper" ID="Audio Loop Player2" Bypassed="1" Gain="1.0"
+    <Processor Type="AudioLooper" ID="Audio Loop Player2" Bypassed="0" Gain="1.0"
                Balance="0.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                SyncMode="1.0" PitchTracking="0.0" LoopEnabled="0.0" RootNote="64.0"
                SampleStartMod="0.0" Reversed="0.0" FileName="C:\Users\nytem\Desktop\vocal_take.wav"
@@ -104,7 +104,7 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="Sine Wave Generator1" Bypassed="1" Gain="1.0"
+    <Processor Type="SineSynth" ID="Sine Wave Generator1" Bypassed="1" Gain="0.2600159645080566"
                Balance="0.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="0.0" CoarseFreqRatio="1.0"
                FineFreqRatio="0.0" SaturationAmount="0.0">
