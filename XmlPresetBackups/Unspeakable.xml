@@ -10,7 +10,7 @@
           <ChildProcessors/>
           <Content>
             <Control type="ScriptSlider" id="knbInputGain" value="0.0"/>
-            <Control type="ScriptSlider" id="knbOutputGain" value="0.0"/>
+            <Control type="ScriptSlider" id="knbOutputGain" value="-16.0"/>
           </Content>
           <UIData Source="UnspeakableUIData"/>
         </Processor>

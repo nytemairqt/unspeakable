@@ -1,4 +1,4 @@
-Content.makeFrontInterface(600, 600);
+Content.makeFrontInterface(350, 100);
 
 const knbControls = [Content.getComponent("knbInputGain"), Content.getComponent("knbOutputGain")]
 const scriptFX = Synth.getEffect("scriptFX");

@@ -5,9 +5,19 @@ template <int NumVoices> struct snex_shaper
 	int MODE = 0;
 	double sr = 0.0;
 	
-	// A - Tape Dirt 00
+	// A - Pleasant Warm
 	float typeA(float input)
 	{
+		float x = input;
+	    float pi = 3.14159266f;	    
+	    if (x > pi)
+	    	x = pi;	    
+	    return x;
+	}
+	
+	// B - Tape Drive
+	float typeB(float input)
+	{	
 	    float x = input;
 	    if (x > 0.0f)
 	    	x = x + Math.tanh(Math.pow(x, 2));
@@ -16,19 +26,7 @@ template <int NumVoices> struct snex_shaper
 	    return x;
 	}
 	
-	// B - Nice Drive 01
-	float typeB(float input)
-	{	
-	    float x = input;
-	    float pi = 3.14159266f;
-	    
-	    if (x > pi)
-	    	x = pi;	    
-	    //x *= .6f;
-	    return x;
-	}
-	
-	// C - Subtle Asymmetric Polynomial 02
+	// C - Asymmetric Polynomial
 	float typeC(float input)
 	{
 	    float x = input;
@@ -54,11 +52,10 @@ template <int NumVoices> struct snex_shaper
 	    return x;
 	}
 	
-	// E - 04
+	// E - Powerful Drive
 	float typeE(float input)
 	{
 	    float x = input;
-	    x *= 12.0f;
 	    if (x < 0.0f)
 	    {
 			x *= .1f;
@@ -112,10 +109,7 @@ template <int NumVoices> struct snex_shaper
 				s = typeE(s);
 				
 			s *= 5.0f;
-
-			//s = typeB(s);
 		}
-			//s = getSample(s);
 	}
 		
 	void prepare(PrepareSpecs ps)
