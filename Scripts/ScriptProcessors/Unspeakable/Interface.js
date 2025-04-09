@@ -18,7 +18,7 @@ inline function onknbControl(component, value)
 			scriptFX.setAttribute(scriptFX.mode, value);
 			break;
 		case knbControls[3]: // Clarity
-			scriptFX.setAttribute(scriptFX.clarity, 0-value);
+			scriptFX.setAttribute(scriptFX.clarity, value);
 			break;
 	}
 }
