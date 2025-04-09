@@ -9,10 +9,14 @@
         <Processor Type="ScriptProcessor" ID="Interface" Bypassed="0">
           <ChildProcessors/>
           <Content>
-            <Control type="ScriptSlider" id="knbInputGain" value="0.0"/>
-            <Control type="ScriptSlider" id="knbOutputGain" value="0.0"/>
-            <Control type="ScriptSlider" id="knbMode" value="0.0"/>
+            <Control type="ScriptSlider" id="knbInputGain" value="11.65999984741211"/>
+            <Control type="ScriptSlider" id="knbOutputGain" value="-22.65999984741211"/>
+            <Control type="ScriptSlider" id="knbMode" value="3.0"/>
             <Control type="ScriptSlider" id="knbClarity" value="0.0"/>
+            <Control type="ScriptButton" id="btnEQA" value="0"/>
+            <Control type="ScriptButton" id="btnEQB" value="0"/>
+            <Control type="ScriptButton" id="btnEQC" value="1.0"/>
+            <Control type="ScriptButton" id="btnEQOff" value="0"/>
           </Content>
           <UIData Source="UnspeakableUIData"/>
         </Processor>
@@ -37,19 +41,44 @@
             <ContentProperties DeviceType="Desktop"/>
           </UIData>
         </Processor>
-        <Processor Type="CurveEq" ID="eqA" Bypassed="0" NumFilters="0" FFTEnabled="0">
+        <Processor Type="CurveEq" ID="eqA" Bypassed="1" NumFilters="6" Band0="1.970000386238098"
+                   Band1="120.0" Band2="0.8600000143051147" Band3="1.0" Band4="4.0"
+                   Band5="-3.972412347793579" Band6="75.42439270019531" Band7="1.0"
+                   Band8="1.0" Band9="1.0" Band10="-3.420000314712524" Band11="4126.3076171875"
+                   Band12="6.340000152587891" Band13="1.0" Band14="4.0" Band15="-1.820690035820007"
+                   Band16="511.9785766601562" Band17="1.690000057220459" Band18="1.0"
+                   Band19="4.0" Band20="-1.880000114440918" Band21="1434.400756835938"
+                   Band22="2.460000038146973" Band23="1.0" Band24="4.0" Band25="-1.158619046211243"
+                   Band26="9114.435546875" Band27="0.5199999809265137" Band28="1.0"
+                   Band29="3.0" FFTEnabled="0">
           <ChildProcessors/>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="CurveEq" ID="eqB" Bypassed="1" NumFilters="0" FFTEnabled="0">
+        <Processor Type="CurveEq" ID="eqB" Bypassed="1" NumFilters="7" Band0="-1.820690035820007"
+                   Band1="66.09223937988281" Band2="1.0" Band3="1.0" Band4="1.0"
+                   Band5="1.84000039100647" Band6="140.3170013427734" Band7="1.0"
+                   Band8="1.0" Band9="4.0" Band10="-2.482757329940796" Band11="505.2608947753906"
+                   Band12="1.0" Band13="1.0" Band14="4.0" Band15="2.730000257492065"
+                   Band16="990.9656372070312" Band17="1.590000033378601" Band18="1.0"
+                   Band19="4.0" Band20="-1.699999690055847" Band21="2633.4970703125"
+                   Band22="2.130000114440918" Band23="1.0" Band24="4.0" Band25="2.151723861694336"
+                   Band26="5303.32421875" Band27="1.0" Band28="1.0" Band29="4.0"
+                   Band30="5.296550750732422" Band31="14093.615234375" Band32="0.4099999964237213"
+                   Band33="1.0" Band34="3.0" FFTEnabled="0">
           <ChildProcessors/>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="CurveEq" ID="eqC" Bypassed="1" NumFilters="0" FFTEnabled="0">
-          <ChildProcessors/>
-          <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
-        </Processor>
-        <Processor Type="CurveEq" ID="eqD" Bypassed="1" NumFilters="0" FFTEnabled="0">
+        <Processor Type="CurveEq" ID="eqC" Bypassed="0" NumFilters="7" Band0="4.260000228881836"
+                   Band1="14462.0" Band2="0.5299999713897705" Band3="1.0" Band4="3.0"
+                   Band5="2.190000057220459" Band6="3005.34423828125" Band7="1.0"
+                   Band8="1.0" Band9="4.0" Band10="0.8900002241134644" Band11="1208.09423828125"
+                   Band12="1.0" Band13="1.0" Band14="4.0" Band15="-2.829999685287476"
+                   Band16="326.7556457519531" Band17="1.0" Band18="1.0" Band19="4.0"
+                   Band20="3.760000228881836" Band21="151.8892822265625" Band22="1.0"
+                   Band23="1.0" Band24="4.0" Band25="-2.813793420791626" Band26="57.15483093261719"
+                   Band27="1.0" Band28="1.0" Band29="1.0" Band30="2.648275375366211"
+                   Band31="9997.302734375" Band32="0.4699999988079071" Band33="1.0"
+                   Band34="4.0" FFTEnabled="0">
           <ChildProcessors/>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
