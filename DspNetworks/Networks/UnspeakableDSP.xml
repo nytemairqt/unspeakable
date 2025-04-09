@@ -69,6 +69,10 @@
             <Parameters>
               <Parameter MinValue="0.0" MaxValue="5.0" StepSize="1" ID="mode" DefaultValue="0.0"
                          Automated="1"/>
+              <Parameter MinValue="0.0" MaxValue="5.0" ID="mA" Value="1.0" DefaultValue="1"/>
+              <Parameter MinValue="0.0" MaxValue="5.0" ID="mB" Value="2.02" DefaultValue="1"/>
+              <Parameter MinValue="0.0" MaxValue="5.0" ID="mC" Value="1.0" DefaultValue="1"/>
+              <Parameter MinValue="0.0" MaxValue="5.0" ID="mD" Value="1.34" DefaultValue="1"/>
             </Parameters>
           </Node>
         </Nodes>
@@ -224,6 +228,17 @@
         </Nodes>
         <Parameters/>
       </Node>
+      <Node ID="gain1" FactoryPath="core.gain" Bypassed="0" Name="levelMatch">
+        <Parameters>
+          <Parameter MinValue="-100.0" MaxValue="0.0" StepSize="0.1000000014901161"
+                     SkewFactor="5.422270774841309" ID="Gain" Value="-10.49999866634607"
+                     DefaultValue="0.0"/>
+          <Parameter MinValue="0.0" MaxValue="1000.0" StepSize="0.1000000014901161"
+                     SkewFactor="0.3010300099849701" ID="Smoothing" Value="20.0"/>
+          <Parameter MinValue="-100.0" MaxValue="0.0" StepSize="0.1000000014901161"
+                     SkewFactor="5.422270774841309" ID="ResetValue" Value="0.0"/>
+        </Parameters>
+      </Node>
       <Node ID="gain3" FactoryPath="core.gain" Bypassed="0" Name="outputGain">
         <Parameters>
           <Parameter MinValue="-100.0" MaxValue="0.0" StepSize="0.01" SkewFactor="1"
@@ -248,7 +263,7 @@
           <Connection NodeId="gain3" ParameterId="Gain"/>
         </Connections>
       </Parameter>
-      <Parameter ID="mode" MinValue="0.0" MaxValue="5.0" StepSize="1" Value="0.0"
+      <Parameter ID="mode" MinValue="0.0" MaxValue="5.0" StepSize="1" Value="3.0"
                  DefaultValue="1.0">
         <Connections>
           <Connection NodeId="snex_shaper" ParameterId="mode"/>

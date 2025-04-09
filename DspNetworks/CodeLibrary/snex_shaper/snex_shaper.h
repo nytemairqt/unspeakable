@@ -3,6 +3,11 @@ template <int NumVoices> struct snex_shaper
 	SNEX_NODE(snex_shaper);	
 	int MODE = 0;
 	double sr = 0.0;
+	float mA = 0.0f;
+	float mB = 0.0f;
+	float mC = 0.0f;
+	float mD = 0.0f;
+	
 	
 	// A - Simple Pi Clipper
 	float typeA(float input)
@@ -10,7 +15,8 @@ template <int NumVoices> struct snex_shaper
 		float x = input;
 	    float pi = 3.14159266f;	    
 	    if (x > pi)
-	    	x = pi;	    
+	    	x = pi;	 
+	    x *= mA;
 	    return x;
 	}
 	
@@ -21,7 +27,8 @@ template <int NumVoices> struct snex_shaper
 	    if (x > 0.0f)
 	    	x = Math.tanh(x + (Math.pow(x, 2)) * 0.77f);
 	    else
-	    	x = Math.sin(x + (Math.pow(x, 2)) * 0.77f + (Math.pow(x, 3)) * 0.20f);		    
+	    	x = Math.sin(x + (Math.pow(x, 2)) * 0.77f + (Math.pow(x, 3)) * 0.20f);	    
+	    x *= mB;
 	    return x;
 	}
 	
@@ -34,6 +41,7 @@ template <int NumVoices> struct snex_shaper
 	    	x = Math.tanh((1.0f * Math.pow(x, 2)) + (0.2f * Math.pow(x, 4)));
 	    else
 	    	x = Math.tanh(x) + (0.35f * Math.pow(x, 3));
+	    x *= mC;
 	    return x;
 	}
 	
@@ -43,6 +51,7 @@ template <int NumVoices> struct snex_shaper
 		float x = input;
 		float dr = (2.0f * 0.22f / (1.0f - 0.22f));		
 		x = (1.0f + dr) * x / (1.0f + dr * Math.abs(x));
+		x *= mD;
 		return x;
 	}
 
@@ -89,6 +98,14 @@ template <int NumVoices> struct snex_shaper
 	{
 		if (P == 0) // Mode
 			MODE = (int)v;	
+		if (P == 1) // makeupA
+			mA = (float)v;
+		if (P == 2) // makeupA
+			mB = (float)v;
+		if (P == 3) // makeupA
+			mC = (float)v;
+		if (P == 4) // makeupA
+			mD = (float)v;
 	}
 	
 	void reset(){}

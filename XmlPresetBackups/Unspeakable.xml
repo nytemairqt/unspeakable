@@ -9,14 +9,14 @@
         <Processor Type="ScriptProcessor" ID="Interface" Bypassed="0">
           <ChildProcessors/>
           <Content>
-            <Control type="ScriptSlider" id="knbInputGain" value="11.65999984741211"/>
-            <Control type="ScriptSlider" id="knbOutputGain" value="-22.65999984741211"/>
+            <Control type="ScriptSlider" id="knbInputGain" value="0.0"/>
+            <Control type="ScriptSlider" id="knbOutputGain" value="0.0"/>
             <Control type="ScriptSlider" id="knbMode" value="3.0"/>
             <Control type="ScriptSlider" id="knbClarity" value="0.0"/>
             <Control type="ScriptButton" id="btnEQA" value="0"/>
             <Control type="ScriptButton" id="btnEQB" value="0"/>
-            <Control type="ScriptButton" id="btnEQC" value="1.0"/>
-            <Control type="ScriptButton" id="btnEQOff" value="0"/>
+            <Control type="ScriptButton" id="btnEQC" value="0"/>
+            <Control type="ScriptButton" id="btnEQOff" value="1.0"/>
           </Content>
           <UIData Source="UnspeakableUIData"/>
         </Processor>
@@ -68,7 +68,7 @@
           <ChildProcessors/>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="CurveEq" ID="eqC" Bypassed="0" NumFilters="7" Band0="4.260000228881836"
+        <Processor Type="CurveEq" ID="eqC" Bypassed="1" NumFilters="7" Band0="4.260000228881836"
                    Band1="14462.0" Band2="0.5299999713897705" Band3="1.0" Band4="3.0"
                    Band5="2.190000057220459" Band6="3005.34423828125" Band7="1.0"
                    Band8="1.0" Band9="4.0" Band10="0.8900002241134644" Band11="1208.09423828125"
