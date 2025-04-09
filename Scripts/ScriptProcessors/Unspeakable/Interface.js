@@ -1,4 +1,5 @@
-Content.makeFrontInterface(540, 280);
+//Content.makeFrontInterface(540, 280);
+Content.makeFrontInterface(810, 420);
 
 include("lookAndFeel.js");
 

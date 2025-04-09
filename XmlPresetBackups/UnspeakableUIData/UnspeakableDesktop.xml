@@ -1,30 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ContentProperties DeviceType="Desktop">
-  <Component type="ScriptPanel" id="pnlBG" x="0.0" y="0.0" width="540.0" height="280.0"
+  <Component type="ScriptPanel" id="pnlBG" x="0.0" y="0.0" width="810.0" height="420.0"
              locked="1"/>
-  <Component type="ScriptSlider" id="knbInputGain" x="39.0" y="49.0" text="Input Gain"
-             max="64.0" middlePosition="32.0" width="100.0" height="100.0"/>
-  <Component type="ScriptSlider" id="knbOutputGain" x="389.0" y="49.0" text="Output Gain"
-             min="-100.0" max="0.0" middlePosition="-50.0" width="100.0" height="100.0"/>
-  <Component type="ScriptSlider" id="knbMode" x="170.0" y="108.0" max="3.0"
-             stepSize="1.0" text="Mode" width="64.0" height="64.0"/>
-  <Component type="ScriptSlider" id="knbClarity" x="290.0" y="108.0" text="Clarity"
-             middlePosition="0.5" width="64.0" height="64.0"/>
-  <Component type="ScriptButton" id="btnEQA" x="219.0" y="215.0" width="40.0"
-             height="16.0" text="A" radioGroup="1.0"/>
-  <Component type="ScriptButton" id="btnEQB" x="279.0" y="215.0" width="40.0"
-             height="16.0" text="B" radioGroup="1.0"/>
-  <Component type="ScriptButton" id="btnEQC" x="339.0" y="215.0" width="40.0"
-             height="16.0" text="C" radioGroup="1.0"/>
-  <Component type="ScriptButton" id="btnEQOff" x="160.0" y="215.0" width="40.0"
-             height="16.0" text="OFF" radioGroup="1.0"/>
-  <Component type="ScriptLabel" id="lblInputGainValue" x="39.0" y="148.0"
-             width="100.0" text="0.00dB" fontName="bold"/>
-  <Component type="ScriptLabel" id="lblOutputGainValue" x="389.0" y="148.0"
-             text="-100.00dB" width="100.0" fontName="bold"/>
-  <Component type="ScriptLabel" id="lblModeValue" x="170.0" y="171.0" text="A"
-             width="64.0" fontName="bold"/>
-  <Component type="ScriptLabel" id="lblClarityValue" x="290.0" y="171.0" text="0%"
-             width="64.0" fontName="bold"/>
+  <Component type="ScriptSlider" id="knbInputGain" x="59.0" y="74.0" text="Input Gain"
+             max="64.0" middlePosition="32.0" width="150.0" height="150.0"
+             mouseSensitivity="3"/>
+  <Component type="ScriptSlider" id="knbOutputGain" x="583.0" y="73.0" text="Output Gain"
+             min="-100.0" max="0.0" middlePosition="-50.0" width="150.0" height="150.0"
+             mouseSensitivity="3"/>
+  <Component type="ScriptSlider" id="knbMode" x="255.0" y="161.0" max="3.0"
+             stepSize="1.0" text="Mode" width="96.0" height="96.0"/>
+  <Component type="ScriptSlider" id="knbClarity" x="436.0" y="161.0" text="Clarity"
+             middlePosition="0.5" width="96.0" height="96.0"/>
+  <Component type="ScriptButton" id="btnEQA" x="327.0" y="321.0" width="60.0"
+             height="24.0" text="A" radioGroup="1.0"/>
+  <Component type="ScriptButton" id="btnEQB" x="417.0" y="321.0" width="60.0"
+             height="24.0" text="B" radioGroup="1.0"/>
+  <Component type="ScriptButton" id="btnEQC" x="506.0" y="321.0" width="60.0"
+             height="24.0" text="C" radioGroup="1.0"/>
+  <Component type="ScriptButton" id="btnEQOff" x="238.0" y="321.0" width="60.0"
+             height="24.0" text="OFF" radioGroup="1.0"/>
+  <Component type="ScriptLabel" id="lblInputGainValue" x="59.0" y="249.0"
+             width="150.0" text="0.00dB" fontName="bold" fontSize="20.0"/>
+  <Component type="ScriptLabel" id="lblOutputGainValue" x="583.0" y="252.0"
+             text="0.00dB" width="150.0" fontName="bold" height="28.0" fontSize="20.0"/>
+  <Component type="ScriptLabel" id="lblModeValue" x="255.0" y="274.0" text="A"
+             width="96.0" fontName="bold" fontSize="16.0"/>
+  <Component type="ScriptLabel" id="lblClarityValue" x="436.0" y="274.0" text="0%"
+             width="96.0" fontName="bold" fontSize="16.0"/>
+  <Component type="ScriptLabel" id="lblInputGain" x="59.0" y="24.0" width="150.0"
+             text="Input Gain" fontName="bold" fontSize="16.0"/>
+  <Component type="ScriptLabel" id="lblOutputGain" x="583.0" y="27.0" width="150.0"
+             text="Output Gain" fontName="bold" fontSize="16.0"/>
+  <Component type="ScriptLabel" id="lblClarity" x="436.0" y="114.0" text="Clarity"
+             width="96.0" fontName="bold" fontSize="16.0"/>
+  <Component type="ScriptLabel" id="lblMode" x="255.0" y="114.0" text="Mode"
+             width="96.0" fontName="bold" fontSize="16.0"/>
+  <Component type="ScriptLabel" id="lblToneCurve" x="104.0" y="319.0" text="Tone Curve:"
+             width="128.0" fontName="bold" fontSize="16.0"/>
 </ContentProperties>

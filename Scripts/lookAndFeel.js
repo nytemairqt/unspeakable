@@ -80,11 +80,15 @@ lafSliderD.registerFunction("drawRotarySlider", function(g, obj)
 
 lafButton.registerFunction("drawToggleButton", function(g, obj)
 {
-	g.setColour(obj.over ? 0xFF292929 : 0xFF262626);
-	g.fillRoundedRectangle(obj.area, 1.0);
+	this.loadImage("{PROJECT_FOLDER}button.png", "button");
+	g.setOpacity(1.0);
+	g.drawImage("button", obj.area, 0, 0);
 	
-	g.setColour(obj.hover ? clrOffWhite : Colours.lightgrey);
-	g.setFont("bold", 12.0);
+	g.setColour(obj.over ? Colours.withAlpha(Colours.white, 0.04) : Colours.withAlpha(Colours.white, 0.00));
+	g.fillRoundedRectangle(obj.area, 2.0);
+	
+	g.setColour(obj.value ? clrOffWhite : clrDarkgrey);
+	g.setFont("bold", 15.0);
 	g.drawAlignedText(obj.text, obj.area, "centred");
 });
 

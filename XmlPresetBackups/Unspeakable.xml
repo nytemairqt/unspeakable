@@ -10,13 +10,13 @@
           <ChildProcessors/>
           <Content>
             <Control type="ScriptSlider" id="knbInputGain" value="0.0"/>
-            <Control type="ScriptSlider" id="knbOutputGain" value="-100.0"/>
+            <Control type="ScriptSlider" id="knbOutputGain" value="0.0"/>
             <Control type="ScriptSlider" id="knbMode" value="0.0"/>
             <Control type="ScriptSlider" id="knbClarity" value="0.0"/>
-            <Control type="ScriptButton" id="btnEQA" value="0"/>
+            <Control type="ScriptButton" id="btnEQA" value="1.0"/>
             <Control type="ScriptButton" id="btnEQB" value="0"/>
             <Control type="ScriptButton" id="btnEQC" value="0"/>
-            <Control type="ScriptButton" id="btnEQOff" value="1.0"/>
+            <Control type="ScriptButton" id="btnEQOff" value="0"/>
           </Content>
           <UIData Source="UnspeakableUIData"/>
         </Processor>
@@ -41,7 +41,7 @@
             <ContentProperties DeviceType="Desktop"/>
           </UIData>
         </Processor>
-        <Processor Type="CurveEq" ID="eqA" Bypassed="1" NumFilters="6" Band0="1.970000386238098"
+        <Processor Type="CurveEq" ID="eqA" Bypassed="0" NumFilters="6" Band0="1.970000386238098"
                    Band1="120.0" Band2="0.8600000143051147" Band3="1.0" Band4="4.0"
                    Band5="-3.972412347793579" Band6="75.42439270019531" Band7="1.0"
                    Band8="1.0" Band9="1.0" Band10="-3.420000314712524" Band11="4126.3076171875"

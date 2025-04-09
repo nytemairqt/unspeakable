@@ -4,8 +4,7 @@
   <Node FactoryPath="container.chain" ID="UnspeakableDSP" Bypassed="0"
         Name="UnspeakableDSP" ShowParameters="1">
     <Nodes>
-      <Node ID="gain2" FactoryPath="core.gain" Bypassed="0" Name="inputGain"
-            Folded="1">
+      <Node ID="gain2" FactoryPath="core.gain" Bypassed="0" Name="inputGain">
         <Parameters>
           <Parameter MinValue="0.0" MaxValue="64.0" StepSize="0.01" SkewFactor="1"
                      ID="Gain" Automated="1"/>
@@ -15,8 +14,7 @@
                      SkewFactor="5.422270774841309" ID="ResetValue" Value="0.0"/>
         </Parameters>
       </Node>
-      <Node ID="chain" FactoryPath="container.chain" Bypassed="0" Name="chain"
-            Folded="1">
+      <Node ID="chain" FactoryPath="container.chain" Bypassed="0" Name="chain">
         <Nodes>
           <Node ID="envelope_follower" FactoryPath="dynamics.envelope_follower"
                 Bypassed="0" Name="envelope_follower">
@@ -67,12 +65,8 @@
               </DisplayBuffers>
             </ComplexData>
             <Parameters>
-              <Parameter MinValue="0.0" MaxValue="5.0" StepSize="1" ID="mode" DefaultValue="0.0"
+              <Parameter MinValue="0.0" MaxValue="3.0" StepSize="1" ID="mode" DefaultValue="0.0"
                          Automated="1"/>
-              <Parameter MinValue="0.0" MaxValue="5.0" ID="mA" Value="1.0" DefaultValue="1"/>
-              <Parameter MinValue="0.0" MaxValue="5.0" ID="mB" Value="2.02" DefaultValue="1"/>
-              <Parameter MinValue="0.0" MaxValue="5.0" ID="mC" Value="1.0" DefaultValue="1"/>
-              <Parameter MinValue="0.0" MaxValue="5.0" ID="mD" Value="1.34" DefaultValue="1"/>
             </Parameters>
           </Node>
         </Nodes>
@@ -147,8 +141,7 @@
           </Node>
           <Node ID="chain2" FactoryPath="container.chain" Bypassed="0" Name="chain2">
             <Nodes>
-              <Node ID="one_pole" FactoryPath="filters.one_pole" Bypassed="0" Name="one_pole"
-                    Folded="1">
+              <Node ID="one_pole" FactoryPath="filters.one_pole" Bypassed="0" Name="one_pole">
                 <ComplexData>
                   <Filters>
                     <Filter Index="-1"/>
@@ -166,8 +159,7 @@
                   <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Enabled" Value="1.0"/>
                 </Parameters>
               </Node>
-              <Node ID="one_pole1" FactoryPath="filters.one_pole" Bypassed="0" Name="one_pole1"
-                    Folded="1">
+              <Node ID="one_pole1" FactoryPath="filters.one_pole" Bypassed="0" Name="one_pole1">
                 <ComplexData>
                   <Filters>
                     <Filter Index="-1"/>
@@ -252,25 +244,25 @@
     </Nodes>
     <Parameters>
       <Parameter ID="inputGain" MinValue="0.0" MaxValue="64.0" StepSize="0.01"
-                 Value="0.0" DefaultValue="0">
+                 Value="14.24" DefaultValue="0">
         <Connections>
           <Connection NodeId="gain2" ParameterId="Gain"/>
         </Connections>
       </Parameter>
       <Parameter ID="outputGain" MinValue="-100.0" MaxValue="0.0" StepSize="0.01"
-                 Value="0.0" DefaultValue="0">
+                 Value="-16.45" DefaultValue="0">
         <Connections>
           <Connection NodeId="gain3" ParameterId="Gain"/>
         </Connections>
       </Parameter>
-      <Parameter ID="mode" MinValue="0.0" MaxValue="5.0" StepSize="1" Value="3.0"
+      <Parameter ID="mode" MinValue="0.0" MaxValue="3.0" StepSize="1" Value="0.0"
                  DefaultValue="1.0">
         <Connections>
           <Connection NodeId="snex_shaper" ParameterId="mode"/>
         </Connections>
       </Parameter>
       <Parameter ID="clarity" MinValue="0.0" MaxValue="1.0" StepSize="0.01" SkewFactor="1"
-                 Value="0.0" DefaultValue="1.0">
+                 Value="0.29" DefaultValue="1.0">
         <Connections>
           <Connection NodeId="pma" ParameterId="Multiply"/>
         </Connections>
