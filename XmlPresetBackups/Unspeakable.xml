@@ -11,7 +11,7 @@
           <Content>
             <Control type="ScriptSlider" id="knbInputGain" value="0.0"/>
             <Control type="ScriptSlider" id="knbOutputGain" value="0.0"/>
-            <Control type="ScriptSlider" id="knbMode" value="3.0"/>
+            <Control type="ScriptSlider" id="knbMode" value="0.0"/>
             <Control type="ScriptSlider" id="knbClarity" value="0.0"/>
           </Content>
           <UIData Source="UnspeakableUIData"/>
@@ -37,8 +37,19 @@
             <ContentProperties DeviceType="Desktop"/>
           </UIData>
         </Processor>
-        <Processor Type="Analyser" ID="Analyser1" Bypassed="0" BufferSize="8192.0"
-                   PreviewType="4.0">
+        <Processor Type="CurveEq" ID="eqA" Bypassed="0" NumFilters="0" FFTEnabled="0">
+          <ChildProcessors/>
+          <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+        </Processor>
+        <Processor Type="CurveEq" ID="eqB" Bypassed="1" NumFilters="0" FFTEnabled="0">
+          <ChildProcessors/>
+          <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+        </Processor>
+        <Processor Type="CurveEq" ID="eqC" Bypassed="1" NumFilters="0" FFTEnabled="0">
+          <ChildProcessors/>
+          <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+        </Processor>
+        <Processor Type="CurveEq" ID="eqD" Bypassed="1" NumFilters="0" FFTEnabled="0">
           <ChildProcessors/>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>

@@ -50,7 +50,7 @@
         <Parameters/>
       </Node>
       <Node ID="oversample4x" FactoryPath="container.oversample4x" Bypassed="0"
-            Name="oversample4x" ShowParameters="0" Folded="1">
+            Name="oversample4x" ShowParameters="0">
         <Nodes>
           <Node ID="snex_shaper" FactoryPath="core.snex_shaper" Bypassed="0"
                 Name="snex_shaper">
@@ -248,7 +248,7 @@
           <Connection NodeId="gain3" ParameterId="Gain"/>
         </Connections>
       </Parameter>
-      <Parameter ID="mode" MinValue="0.0" MaxValue="5.0" StepSize="1" Value="3.0"
+      <Parameter ID="mode" MinValue="0.0" MaxValue="5.0" StepSize="1" Value="0.0"
                  DefaultValue="1.0">
         <Connections>
           <Connection NodeId="snex_shaper" ParameterId="mode"/>

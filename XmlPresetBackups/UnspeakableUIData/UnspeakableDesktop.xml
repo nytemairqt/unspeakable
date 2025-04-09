@@ -5,7 +5,7 @@
              max="64.0" middlePosition="32.0"/>
   <Component type="ScriptSlider" id="knbOutputGain" x="170.0" y="30.0" text="Output Gain"
              min="-100.0" max="0.0" middlePosition="-50.0"/>
-  <Component type="ScriptSlider" id="knbMode" x="320.0" y="30.0" max="5.0"
+  <Component type="ScriptSlider" id="knbMode" x="320.0" y="30.0" max="3.0"
              stepSize="1.0" text="Mode"/>
   <Component type="ScriptSlider" id="knbClarity" x="480.0" y="30.0" text="Clarity"
              middlePosition="0.5"/>

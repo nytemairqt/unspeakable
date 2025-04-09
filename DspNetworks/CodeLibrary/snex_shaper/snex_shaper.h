@@ -1,7 +1,6 @@
 template <int NumVoices> struct snex_shaper
 {
-	SNEX_NODE(snex_shaper);
-	
+	SNEX_NODE(snex_shaper);	
 	int MODE = 0;
 	double sr = 0.0;
 	
@@ -61,8 +60,7 @@ template <int NumVoices> struct snex_shaper
 				if (MODE == 2)
 					s = typeC(s);
 				if (MODE == 3)
-					s = typeD(s);	
-				s *= 5.0f;				
+					s = typeD(s);			
 			}
 		}
 	}
@@ -78,9 +76,7 @@ template <int NumVoices> struct snex_shaper
 			if (MODE == 2)
 				s = typeC(s);
 			if (MODE == 3)
-				s = typeD(s);		
-				
-			s *= 5.0f;		
+				s = typeD(s);
 		}
 	}
 		
