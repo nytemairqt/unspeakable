@@ -10,8 +10,8 @@
           <ChildProcessors/>
           <Content>
             <Control type="ScriptSlider" id="knbInputGain" value="0.0"/>
-            <Control type="ScriptSlider" id="knbOutputGain" value="0.0"/>
-            <Control type="ScriptSlider" id="knbMode" value="3.0"/>
+            <Control type="ScriptSlider" id="knbOutputGain" value="-100.0"/>
+            <Control type="ScriptSlider" id="knbMode" value="0.0"/>
             <Control type="ScriptSlider" id="knbClarity" value="0.0"/>
             <Control type="ScriptButton" id="btnEQA" value="0"/>
             <Control type="ScriptButton" id="btnEQB" value="0"/>

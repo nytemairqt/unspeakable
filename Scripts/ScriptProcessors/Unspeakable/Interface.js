@@ -1,8 +1,12 @@
-Content.makeFrontInterface(700, 160);
+Content.makeFrontInterface(540, 280);
+
+include("lookAndFeel.js");
 
 // Declare Const
 const knb = [Content.getComponent("knbInputGain"), Content.getComponent("knbOutputGain"), Content.getComponent("knbMode"), Content.getComponent("knbClarity")];
 const btn = [Content.getComponent("btnEQOff"), Content.getComponent("btnEQA"), Content.getComponent("btnEQB"), Content.getComponent("btnEQC")];
+const lbl = [Content.getComponent("lblInputGainValue"), Content.getComponent("lblOutputGainValue"), Content.getComponent("lblModeValue"), Content.getComponent("lblClarityValue")];
+const modes = ["A", "B", "C", "D"];
 const scriptFX = Synth.getEffect("scriptFX");
 const eq = [Synth.getEffect("eqA"), Synth.getEffect("eqB"), Synth.getEffect("eqC")];
 
@@ -14,21 +18,30 @@ inline function onknbControl(component, value)
 	{
 		case knb[0]: // Input Gain
 			scriptFX.setAttribute(scriptFX.inputGain, value);
+			lbl[0].set("text", Engine.doubleToString(value, 2) + "dB");
 			break;
 		case knb[1]: // Output Gain
 			scriptFX.setAttribute(scriptFX.outputGain, value);
+			lbl[1].set("text", Engine.doubleToString(value, 2) + "dB");
 			break;
 		case knb[2]: // Mode
 			scriptFX.setAttribute(scriptFX.mode, value);			
+			lbl[2].set("text", modes[value]);
 			break;
 		case knb[3]: // Clarity
 			scriptFX.setAttribute(scriptFX.clarity, value);
+			lbl[3].set("text", Math.round(value * 100) + "%");
 			break;
 	}
 }
 
 for (k in knb)
 	k.setControlCallback(onknbControl);
+knb[0].setLocalLookAndFeel(lafSliderA);
+knb[1].setLocalLookAndFeel(lafSliderB);
+knb[2].setLocalLookAndFeel(lafSliderC);
+knb[3].setLocalLookAndFeel(lafSliderD);
+	
 	
 inline function toggleEQ(index)
 {
@@ -60,7 +73,11 @@ inline function onbtnControl(component, value)
 }
 
 for (b in btn)
-	b.setControlCallback(onbtnControl);function onNoteOn()
+{
+	b.setControlCallback(onbtnControl);
+	b.setLocalLookAndFeel(lafButton);
+}
+	function onNoteOn()
 {
 	
 }
